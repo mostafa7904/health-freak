@@ -52,6 +52,8 @@ export default {
     "@nuxtjs/axios",
     // https://go.nuxtjs.dev/pwa
     "@nuxtjs/pwa",
+    // https://i18n.nuxtjs.org/
+    "@nuxtjs/i18n",
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
@@ -65,6 +67,16 @@ export default {
     manifest: {
       lang: "en",
     },
+  },
+
+  i18n: {
+    locales: [
+      { code: "en", iso: "en", dir: "ltr" },
+      { code: "fa", iso: "fa_IR", dir: "rtl" },
+    ],
+    defaultLocale: "en",
+    vueI18nLoader: true,
+    strategy: "no_prefix",
   },
 
   render: {

@@ -14,7 +14,7 @@
               exact
               to="/"
             >
-              Home
+              {{ $t("Home") }}
             </nuxt-link>
           </li>
           <li class="nav-list-item">
@@ -24,7 +24,7 @@
               exact
               to="/search"
             >
-              Search
+              {{ $t("Search") }}
             </nuxt-link>
           </li>
           <li class="nav-list-item">
@@ -34,7 +34,7 @@
               exact
               to="/about"
             >
-              About
+              {{ $t("About") }}
             </nuxt-link>
           </li>
         </ul>
@@ -46,7 +46,7 @@
           target="_blank"
           href="https://ideato.ir/mostafa7904"
         >
-          Donate
+          {{ $t("Donate") }}
         </h-btn>
       </nav>
     </header>
@@ -138,3 +138,20 @@ export default defineComponent({
   }
 }
 </style>
+
+<i18n>
+{
+  "en": {
+    "Home": "Home",
+    "Search": "Search",
+    "About": "About",
+    "Donate": "Donate"
+  },
+  "fa": {
+     "Home": "خانه",
+    "Search": "جستجو",
+    "About": "درباره",
+    "Donate": "دونیت"
+  }
+}
+</i18n>
