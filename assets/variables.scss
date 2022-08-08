@@ -1,27 +1,31 @@
-$h-primary: "#44d49d";
-$h-secondary: "#f5f5f5";
-$h-success: "#00b300";
-$h-warning: "#f3b300";
-$h-danger: "#f30000";
-$h-info: "#00b3f3";
+$h-primary: "#ab98f2";
+$h-secondary: "#f2f3f5";
+$h-success: "#00e676";
+$h-warning: "#FFC107";
+$h-error: "#FF5252";
+$h-info: "#2196F3";
 $h-light: "#f3f3f3";
-$h-dark: "#0070f3";
+$h-dark: "#272727";
 
 $h-colors: (
   "primary": $h-primary,
   "secondary": $h-secondary,
   "success": $h-success,
   "warning": $h-warning,
-  "danger": $h-danger,
+  "error": $h-error,
   "info": $h-info,
   "light": $h-light,
   "dark": $h-dark,
 );
 
 $h-radius: (
-  "xs": 1px,
-  "sm": 3px,
-  "md": 5px,
-  "lg": 10px,
-  "xl": 18px,
+  0: 0,
+  "sm": 2px,
+  "md": 4px,
+  "lg": 8px,
+  "xl": 24px,
+  circle: 50%,
 );
+
+$header-height: 76px;
+$main-padding: $header-height 0 0 0;

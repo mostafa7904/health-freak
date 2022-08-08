@@ -4,50 +4,55 @@
       <nav class="h-navbar">
         <h-btn to="/">
           <img width="50" src="/icon.png" alt="health freak icon" />
-          <span class="website-name"> Health Freak </span>
         </h-btn>
 
-        <div class="rounded-lg border-4 border-black">
-          <ul class="nav-list">
-            <li class="nav-list-item">
-              <nuxt-link
-                class="nav-list-item__link"
-                exact-active-class="nav-list-item__link--active"
-                exact
-                to="/"
-              >
-                Home
-              </nuxt-link>
-            </li>
-            <li class="nav-list-item">
-              <nuxt-link
-                class="nav-list-item__link"
-                exact-active-class="nav-list-item__link--active"
-                exact
-                to="/search"
-              >
-                Search
-              </nuxt-link>
-            </li>
-            <li class="nav-list-item">
-              <nuxt-link
-                class="nav-list-item__link"
-                exact-active-class="nav-list-item__link--active"
-                exact
-                to="/about"
-              >
-                About
-              </nuxt-link>
-            </li>
-          </ul>
-        </div>
+        <ul class="nav-list rounded-lg border-4 border-black">
+          <li class="nav-list-item">
+            <nuxt-link
+              class="nav-list-item__link"
+              exact-active-class="nav-list-item__link--active"
+              exact
+              to="/"
+            >
+              Home
+            </nuxt-link>
+          </li>
+          <li class="nav-list-item">
+            <nuxt-link
+              class="nav-list-item__link"
+              exact-active-class="nav-list-item__link--active"
+              exact
+              to="/search"
+            >
+              Search
+            </nuxt-link>
+          </li>
+          <li class="nav-list-item">
+            <nuxt-link
+              class="nav-list-item__link"
+              exact-active-class="nav-list-item__link--active"
+              exact
+              to="/about"
+            >
+              About
+            </nuxt-link>
+          </li>
+        </ul>
 
-        <h-btn color="purple lighten-1" href="https://ideato.ir/mostafa7904">
+        <h-btn
+          rounded
+          color="app dark"
+          outlined
+          target="_blank"
+          href="https://ideato.ir/mostafa7904"
+        >
           Donate
         </h-btn>
       </nav>
     </header>
-    <nuxt />
+    <h-main>
+      <nuxt />
+    </h-main>
   </div>
 </template>
 
@@ -61,10 +66,19 @@ export default defineComponent({
 </script>
 
 <style lang="scss">
+@import "~/assets/variables.scss";
+
 #app {
-  display: flex;
   position: relative;
   padding: 50px;
+  flex: 1 1 auto;
+  backface-visibility: hidden;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  max-width: 100%;
+  color: black;
+
   @media screen and (max-width: 768px) {
     padding: 10px;
   }
@@ -92,10 +106,14 @@ export default defineComponent({
 
 .nav-list {
   display: flex;
+  flex: 0.5;
   list-style-type: none;
   align-items: center;
-  justify-content: center;
-  padding: 15px;
+  justify-content: space-between;
+  padding: 15px 8px;
+  @media screen and (max-width: 768px) {
+    flex: 0.8;
+  }
 }
 
 .nav-list-item {
@@ -103,17 +121,18 @@ export default defineComponent({
     padding: 8px 15px;
     border-radius: 4px;
     &--active {
-      background: #f65d5f;
+      background: #{$h-primary};
       color: white;
       text-decoration: none !important;
     }
   }
-  &:nth-child(even) {
-    margin: 0 100px;
-  }
+  // &:nth-child(even) {
+  //   margin: 0 100px;
+  // }
 }
 
 .website-name {
+  font-weight: 600;
   @media screen and (max-width: 768px) {
     display: none;
   }

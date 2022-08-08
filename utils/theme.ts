@@ -1,5 +1,8 @@
-// Utilities
+// Constants
 import colors from "~/constants/colors";
+const contrastRatioThreshold = 12.7;
+
+// Utilities
 import {
   classToHex,
   isCssColor,
@@ -17,6 +20,8 @@ interface BorderModifiers {
 }
 
 function genTextColor(color: string) {
+  if (!color) return {};
+
   const cssColor = !isCssColor(color) ? classToHex(color, colors) : color;
 
   return {
@@ -25,18 +30,28 @@ function genTextColor(color: string) {
   };
 }
 
+function genBoxShadowColor(color: string) {
+  if (!color) return {};
+  const cssColor = !isCssColor(color) ? classToHex(color, colors) : color;
+
+  return {
+    boxShadow: `0 10px 20px -10px ${cssColor}`,
+  };
+}
+
 function genBackgroundColor(color: string) {
+  if (!color) return {};
   const cssColor = !isCssColor(color) ? classToHex(color, colors) : color;
   const white_rgba = HexToRGBA("#fff");
-  const contrastWithWhite = cssColor
-    ? contrastRatio(HexToRGBA(parseHex(cssColor)), white_rgba)
-    : 5;
-
-  const styles = {
+  const contrastWithWhite = contrastRatio(
+    HexToRGBA(parseHex(cssColor)),
+    white_rgba
+  );
+  const styles: any = {
     backgroundColor: cssColor,
     borderColor: cssColor,
-    color: contrastWithWhite > 4.5 ? "#000" : "#fff",
-  } as any;
+    color: contrastWithWhite > contrastRatioThreshold ? "#000" : "#fff",
+  };
 
   for (const key in styles) {
     const element = styles[key];
@@ -46,18 +61,12 @@ function genBackgroundColor(color: string) {
   return styles;
 }
 
-function genBorderColor(color: string, modifiers?: BorderModifiers) {
+function genBorderColor(color: string) {
+  if (!color) return {};
   const cssColor = !isCssColor(color) ? classToHex(color, colors) : color;
-  if (!modifiers || !Object.keys(modifiers).length) {
-    return {
-      borderColor: cssColor,
-    };
-  }
-
-  if (modifiers.top) return { borderTopColor: cssColor };
-  if (modifiers.right) return { borderRightColor: cssColor };
-  if (modifiers.bottom) return { borderBottomColor: cssColor };
-  if (modifiers.left) return { borderLeftColor: cssColor };
+  return {
+    borderColor: cssColor,
+  };
 }
 
 function genGradientColor(gradient: string) {
@@ -66,4 +75,10 @@ function genGradientColor(gradient: string) {
   };
 }
 
-export { genTextColor, genBackgroundColor, genBorderColor, genGradientColor };
+export {
+  genTextColor,
+  genBackgroundColor,
+  genBorderColor,
+  genGradientColor,
+  genBoxShadowColor,
+};

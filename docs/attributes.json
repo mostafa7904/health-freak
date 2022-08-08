@@ -1,0 +1,50 @@
+{
+  "h-btn/disabled": {
+    "type": "boolean",
+    "description": "Whether the button is disabled or not"
+  },
+  "h-btn/outlined": {
+    "type": "boolean",
+    "description": "Whether the button is outlined or not"
+  },
+  "h-btn/flat": {
+    "type": "boolean",
+    "description": "flat mode button has no shadow"
+  },
+  "h-btn/color": {
+    "type": "string",
+    "description": "color of the button"
+  },
+  "h-btn/icon": {
+    "type": "boolean",
+    "description": "text mode button has no background"
+  },
+  "h-btn/loading": {
+    "type": "boolean",
+    "description": "text mode button has no background"
+  },
+  "h-btn/plain": {
+    "type": "boolean",
+    "description": "text mode button has no background"
+  },
+  "h-btn/rounded": {
+    "type": "boolean",
+    "description": "text mode button has no background"
+  },
+  "h-btn/to": {
+    "type": "string",
+    "description": "text mode button has no background"
+  },
+  "h-btn/href": {
+    "type": "string",
+    "description": "text mode button has no background"
+  },
+  "h-btn/text": {
+    "type": "boolean",
+    "description": "text mode button has no background"
+  },
+  "h-btn/tile": {
+    "type": "boolean",
+    "description": "text mode button has no background"
+  }
+}

@@ -8,16 +8,21 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
-import { genBackgroundColor, genTextColor } from "~/utils/theme";
+import { defineComponent } from "vue";
+import {
+  genBackgroundColor,
+  genBorderColor,
+  genBoxShadowColor,
+  genTextColor,
+} from "~/utils/theme";
 
-export default Vue.extend({
+export default defineComponent({
   name: "HealthFreakButton",
 
   props: {
     activeClass: String,
     block: Boolean,
-    depressed: Boolean,
+    flat: Boolean,
     icon: Boolean,
     loading: Boolean,
     outlined: Boolean,
@@ -45,7 +50,7 @@ export default Vue.extend({
     },
     color: {
       type: String,
-      default: "primary",
+      default: null,
     },
   },
 
@@ -53,13 +58,12 @@ export default Vue.extend({
     computedClasses(): any {
       return {
         "h-btn": true,
-        "h-btn--block": this.block,
+        // "h-btn--block": this.block,
         "h-btn--disabled": this.disabled,
         "h-btn--icon": this.icon,
         "h-btn--loading": this.loading,
         "h-btn--outlined": this.outlined,
         "h-btn--plain": this.plain,
-        "h-btn--round": this.rounded,
         "h-btn--rounded": this.rounded,
         "h-btn--link": this.to || this.href,
         "h-btn--text": this.text,
@@ -67,14 +71,14 @@ export default Vue.extend({
       };
     },
     computedStyles(): any {
-      if (this.hasBg) {
-        return {
-          ...genBackgroundColor(this.color),
-        };
-      }
-      return {
+      let styles: any = {
         ...genTextColor(this.color),
       };
+      if (this.hasBg) styles = { ...styles, ...genBackgroundColor(this.color) };
+      if (!this.flat && this.hasBg)
+        styles = { ...styles, ...genBoxShadowColor(this.color) };
+      if (this.outlined) styles = { ...styles, ...genBorderColor(this.color) };
+      return styles;
     },
     computedTag() {
       if (this.to) return "nuxt-link";
@@ -112,7 +116,6 @@ export default Vue.extend({
 
 .h-btn {
   position: relative;
-  padding: 10px;
   align-items: center;
   display: inline-flex;
   flex: 0 0 auto;
@@ -135,6 +138,8 @@ export default Vue.extend({
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
   &__content {
+    padding: 10px 12px;
+    width: 100%;
     align-items: center;
     color: inherit;
     display: flex;
@@ -149,6 +154,17 @@ export default Vue.extend({
     &:hover {
       text-decoration: none;
     }
+  }
+  &--outlined {
+    border: thin solid;
+  }
+  &--disabled {
+    cursor: not-allowed;
+    pointer-events: none;
+    opacity: 0.5;
+  }
+  &--rounded {
+    border-radius: map-get($map: $h-radius, $key: "xl");
   }
 }
 </style>

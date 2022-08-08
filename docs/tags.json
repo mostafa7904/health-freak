@@ -1,0 +1,19 @@
+{
+  "h-btn": {
+    "attributes": [
+      "outlined",
+      "text",
+      "color",
+      "disabled",
+      "flat",
+      "icon",
+      "loading",
+      "plain",
+      "rounded",
+      "to",
+      "href",
+      "tile"
+    ],
+    "description": "A simple button"
+  }
+}

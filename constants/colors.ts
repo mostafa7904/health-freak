@@ -315,6 +315,17 @@ const shades = Object.freeze({
   transparent: "transparent",
 });
 
+const app = Object.freeze({
+  primary: "#ab98f2",
+  secondary: "#f2f3f5",
+  success: "#00e676",
+  warning: "#FFC107",
+  error: "#FF5252",
+  info: "#2196F3",
+  light: "#f3f3f3",
+  dark: "#272727",
+});
+
 export default Object.freeze({
   red,
   pink,
@@ -336,4 +347,5 @@ export default Object.freeze({
   blueGrey,
   grey,
   shades,
+  app,
 });
