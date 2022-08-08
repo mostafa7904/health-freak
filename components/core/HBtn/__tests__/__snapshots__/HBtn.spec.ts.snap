@@ -1,0 +1,11 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HBtn.vue should render an <a> tag when provided a to prop 1`] = `"<a class=\\"h-btn h-btn--link\\" style=\\"color: rgb(0, 0, 0);\\"><span class=\\"h-btn__content\\"></span></a>"`;
+
+exports[`HBtn.vue should render an <a> tag when using href prop 1`] = `"<a href=\\"http://www.google.com\\" class=\\"h-btn h-btn--link\\" style=\\"color: rgb(0, 0, 0);\\"><span class=\\"h-btn__content\\"></span></a>"`;
+
+exports[`HBtn.vue should render component and match snapshot 1`] = `"<button class=\\"h-btn\\" style=\\"color: rgb(0, 0, 0);\\"><span class=\\"h-btn__content\\"></span></button>"`;
+
+exports[`HBtn.vue should render component with color prop and match snapshot 1`] = `"<button class=\\"h-btn\\" style=\\"background-color: rgb(67, 160, 71); border-color: #43a047; color: rgb(0, 0, 0);\\"><span class=\\"h-btn__content\\"></span></button>"`;
+
+exports[`HBtn.vue should render specified tag when using tag prop 1`] = `"<div class=\\"h-btn\\" style=\\"color: rgb(0, 0, 0);\\"><span class=\\"h-btn__content\\"></span></div>"`;

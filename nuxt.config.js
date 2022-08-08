@@ -86,6 +86,10 @@ export default {
       name: undefined,
       cacheGroups: {},
     },
+    html: {
+      minifyCSS: true,
+      minifyJS: false,
+    },
     terser: {
       parallel: true,
       cache: false,
