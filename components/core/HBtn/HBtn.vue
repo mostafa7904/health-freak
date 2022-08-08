@@ -41,7 +41,7 @@ export default Vue.extend({
     },
     href: {
       type: String,
-      default: "",
+      default: null,
     },
     color: {
       type: String,
@@ -67,7 +67,6 @@ export default Vue.extend({
       };
     },
     computedStyles(): any {
-      // const style = {};
       if (this.hasBg) {
         return {
           ...genBackgroundColor(this.color),
@@ -135,6 +134,17 @@ export default Vue.extend({
   transition-property: box-shadow, transform, opacity;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
+  &__content {
+    align-items: center;
+    color: inherit;
+    display: flex;
+    flex: 1 0 auto;
+    justify-content: inherit;
+    line-height: normal;
+    position: relative;
+    transition: inherit;
+    transition-property: opacity;
+  }
   &--link {
     &:hover {
       text-decoration: none;

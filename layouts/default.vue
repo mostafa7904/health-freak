@@ -2,7 +2,7 @@
   <div id="app">
     <header class="h-header">
       <nav class="h-navbar">
-        <h-btn class="">
+        <h-btn to="/">
           <img width="50" src="/icon.png" alt="health freak icon" />
           <span class="website-name"> Health Freak </span>
         </h-btn>

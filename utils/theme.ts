@@ -28,16 +28,22 @@ function genTextColor(color: string) {
 function genBackgroundColor(color: string) {
   const cssColor = !isCssColor(color) ? classToHex(color, colors) : color;
   const white_rgba = HexToRGBA("#fff");
-  const contrastWithWhite = contrastRatio(
-    HexToRGBA(parseHex(cssColor)),
-    white_rgba
-  );
+  const contrastWithWhite = cssColor
+    ? contrastRatio(HexToRGBA(parseHex(cssColor)), white_rgba)
+    : 5;
 
-  return {
+  const styles = {
     backgroundColor: cssColor,
     borderColor: cssColor,
     color: contrastWithWhite > 4.5 ? "#000" : "#fff",
-  };
+  } as any;
+
+  for (const key in styles) {
+    const element = styles[key];
+    if (!element) delete styles[key];
+  }
+
+  return styles;
 }
 
 function genBorderColor(color: string, modifiers?: BorderModifiers) {
