@@ -316,7 +316,8 @@ const shades = Object.freeze({
 });
 
 const app = Object.freeze({
-  primary: "#ab98f2",
+  primary: "#55bd6d",
+  accent: "#e6f6ee",
   secondary: "#f2f3f5",
   success: "#00e676",
   warning: "#FFC107",

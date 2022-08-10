@@ -1,4 +1,5 @@
-$h-primary: "#ab98f2";
+$h-primary: "#55bd6d";
+$h-accent: "#e6f6ee";
 $h-secondary: "#f2f3f5";
 $h-success: "#00e676";
 $h-warning: "#FFC107";
@@ -9,6 +10,7 @@ $h-dark: "#272727";
 
 $h-colors: (
   "primary": $h-primary,
+  "accent": $h-accent,
   "secondary": $h-secondary,
   "success": $h-success,
   "warning": $h-warning,
