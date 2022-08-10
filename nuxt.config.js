@@ -16,9 +16,16 @@ export default {
         href: "https://fonts.gstatic.com",
         crossorigin: "",
       },
+      // // Open sans
+      // {
+      //   rel: "stylesheet",
+      //   href: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.-",
+      //   crossorigin: "",
+      // },
+      // VazirMatn
       {
         rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,300;1,400;1,500;1,600;1,700;1,800&display=swap",
+        href: "https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap&text=آابپثجچحخدذرزژسشصضطظعغفقکگلمنوهی ّ/ء",
         crossorigin: "",
       },
       {
@@ -71,12 +78,13 @@ export default {
 
   i18n: {
     locales: [
-      { code: "en", iso: "en", dir: "ltr" },
+      { code: "en", iso: "en_US", dir: "ltr" },
       { code: "fa", iso: "fa_IR", dir: "rtl" },
     ],
     defaultLocale: "en",
     vueI18nLoader: true,
     strategy: "no_prefix",
+    seo: true,
   },
 
   render: {

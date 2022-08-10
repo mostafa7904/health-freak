@@ -2,7 +2,7 @@
   <div id="app">
     <header class="h-header">
       <nav class="h-navbar">
-        <h-btn to="/">
+        <h-btn icon to="/">
           <img width="50" src="/icon.png" alt="health freak icon" />
         </h-btn>
 
@@ -57,10 +57,13 @@
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import Vue from "vue";
 
-export default defineComponent({
+export default Vue.extend({
   name: "defaultLayout",
+  head() {
+    return this.$nuxtI18nHead({ addSeoAttributes: true });
+  },
   data: () => ({}),
 });
 </script>
@@ -70,7 +73,7 @@ export default defineComponent({
 
 #app {
   position: relative;
-  padding: 50px;
+  padding: 25px;
   flex: 1 1 auto;
   backface-visibility: hidden;
   display: flex;
@@ -89,11 +92,10 @@ export default defineComponent({
   top: 0;
   left: 0px;
   right: 0px;
-  height: 76px;
-  min-height: 76px;
+  height: 68px;
+  min-height: 68px;
   width: 100%;
   margin-top: 0px;
-  padding: 0 15px;
   display: flex;
 }
 
@@ -126,9 +128,6 @@ export default defineComponent({
       text-decoration: none !important;
     }
   }
-  // &:nth-child(even) {
-  //   margin: 0 100px;
-  // }
 }
 
 .website-name {

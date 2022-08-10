@@ -12,12 +12,12 @@
       4
     </div>
     <div class="mt-4">
-      {{ error.statusCode === 404 ? pageNotFound : otherError }}
+      {{ error.statusCode === 404 ? $t("pageNotFound") : $t("otherError") }}
     </div>
   </div>
 </template>
 
-<script>
+<script lang="ts">
 export default {
   props: {
     error: {
@@ -25,15 +25,12 @@ export default {
       default: null,
     },
   },
-  data: () => ({
-    pageNotFound: "Seems like you got lost...",
-    otherError: "Something went wrong...",
-  }),
   head() {
-    const title =
-      this.error.statusCode === 404 ? this.pageNotFound : this.otherError;
     return {
-      title,
+      title:
+        this.error.statusCode === 404
+          ? (this.$t("pageNotFound") as string)
+          : (this.$t("otherError") as string),
     };
   },
 };
@@ -54,3 +51,16 @@ $size: 120px;
   justify-content: center;
 }
 </style>
+
+<i18n>
+{
+  "en": {
+    "pageNotFound": "Seems like you are lost...",
+    "otherError": "Something went wrong..."
+  },
+  "fa": {
+    "pageNotFound": "مثل این که راه رو گم کردی...",
+    "otherError": "یه مشکلی پیش اومد..."
+  }
+}
+</i18n>
