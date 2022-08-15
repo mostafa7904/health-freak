@@ -14,6 +14,14 @@
       "href",
       "tile"
     ],
-    "description": "A simple button"
+    "description": "A simple button."
+  },
+  "h-main": {
+    "attributes": [],
+    "description": "Wrap your main content and pages in this component."
+  },
+  "h-highlight": {
+    "attributes": [],
+    "description": "A highlight mark element. put your text inside this component and see the highlight under it."
   }
 }
