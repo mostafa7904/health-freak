@@ -1,0 +1,7 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HMain.vue should render component and match snapshot 1`] = `
+"<main class=\\"h-main\\">
+  <div class=\\"h-main__wrap\\"></div>
+</main>"
+`;
