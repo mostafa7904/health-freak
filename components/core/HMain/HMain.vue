@@ -1,21 +1,21 @@
 <template>
   <main class="h-main">
     <div class="h-main__wrap">
-      <slot></slot>
+      <slot />
     </div>
   </main>
 </template>
 
 <script lang="ts">
-import { defineComponent } from "vue";
+import { defineComponent } from 'vue'
 
 export default defineComponent({
-  name: "HealthFreakMain",
-});
+  name: 'HealthFreakMain'
+})
 </script>
 
 <style lang="scss">
-@import "~/assets/variables.scss";
+@import '~/assets/variables.scss';
 
 .h-main {
   display: flex;

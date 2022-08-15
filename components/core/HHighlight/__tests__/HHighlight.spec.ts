@@ -1,30 +1,30 @@
 // Libraries
-import Vue from "vue";
-
-// Components
-import HHighlight from "../HHighlight.vue";
+import Vue from 'vue'
 
 // Utilities
-import { createLocalVue, mount, Wrapper } from "@vue/test-utils";
+import { createLocalVue, mount, Wrapper } from '@vue/test-utils'
 
-describe("HHighlight.vue", () => {
-  let mountFunction: (options?: object) => Wrapper<Vue>;
+// Components
+import HHighlight from '../HHighlight.vue'
 
-  let localVue: typeof Vue;
+describe('HHighlight.vue', () => {
+  let mountFunction: (options?: object) => Wrapper<Vue>
+
+  let localVue: typeof Vue
 
   beforeEach(() => {
-    localVue = createLocalVue();
+    localVue = createLocalVue()
 
     mountFunction = (options = {}) => {
       return mount(HHighlight, {
         localVue,
-        ...options,
-      });
-    };
-  });
+        ...options
+      })
+    }
+  })
 
-  it("should render component and match snapshot", () => {
-    const html = mountFunction().html();
-    expect(html).toMatchSnapshot();
-  });
-});
+  it('should render component and match snapshot', () => {
+    const html = mountFunction().html()
+    expect(html).toMatchSnapshot()
+  })
+})

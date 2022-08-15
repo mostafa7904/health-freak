@@ -14,7 +14,7 @@
               exact
               to="/"
             >
-              {{ $t("Home") }}
+              {{ $t('Home') }}
             </nuxt-link>
           </li>
           <li class="nav-list-item">
@@ -24,7 +24,7 @@
               exact
               to="/search"
             >
-              {{ $t("Search") }}
+              {{ $t('Search') }}
             </nuxt-link>
           </li>
           <li class="nav-list-item">
@@ -34,7 +34,7 @@
               exact
               to="/about"
             >
-              {{ $t("About") }}
+              {{ $t('About') }}
             </nuxt-link>
           </li>
         </ul>
@@ -46,7 +46,7 @@
           target="_blank"
           href="https://ideato.ir/mostafa7904"
         >
-          {{ $t("Donate") }}
+          {{ $t('Donate') }}
         </h-btn>
       </nav>
     </header>
@@ -57,19 +57,18 @@
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  name: "defaultLayout",
+  name: 'DefaultLayout',
   head() {
-    return this.$nuxtI18nHead({ addSeoAttributes: true });
-  },
-  data: () => ({}),
-});
+    return this.$nuxtI18nHead({ addSeoAttributes: true })
+  }
+})
 </script>
 
 <style lang="scss">
-@import "~/assets/variables.scss";
+@import '~/assets/variables.scss';
 
 #app {
   position: relative;

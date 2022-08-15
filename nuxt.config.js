@@ -1,20 +1,20 @@
 export default {
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
-    title: "Health Freak",
+    title: 'Health Freak',
     meta: [
-      { charset: "utf-8" },
-      { name: "viewport", content: "width=device-width, initial-scale=1" },
-      { hid: "description", name: "description", content: "" },
-      { name: "format-detection", content: "telephone=no" },
+      { charset: 'utf-8' },
+      { name: 'viewport', content: 'width=device-width, initial-scale=1' },
+      { hid: 'description', name: 'description', content: '' },
+      { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: "icon", type: "image/x-icon", href: "/favicon.ico" },
-      { rel: "preconnect", href: "https://fonts.googleapis.com" },
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      { rel: 'preconnect', href: 'https://fonts.googleapis.com' },
       {
-        rel: "preconnect",
-        href: "https://fonts.gstatic.com",
-        crossorigin: "",
+        rel: 'preconnect',
+        href: 'https://fonts.gstatic.com',
+        crossorigin: ''
       },
       // // Open sans
       // {
@@ -24,75 +24,75 @@ export default {
       // },
       // VazirMatn
       {
-        rel: "stylesheet",
-        href: "https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap&text=آابپثجچحخدذرزژسشصضطظعغفقکگلمنوهی ّ/ء",
-        crossorigin: "",
+        rel: 'stylesheet',
+        href: 'https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap&text=آابپثجچحخدذرزژسشصضطظعغفقکگلمنوهی ّ/ء',
+        crossorigin: ''
       },
       {
-        rel: "stylesheet",
-        href: "https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css",
-        crossorigin: "",
-      },
-    ],
+        rel: 'stylesheet',
+        href: 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css',
+        crossorigin: ''
+      }
+    ]
   },
 
   // Global CSS: https://go.nuxtjs.dev/config-css
-  css: ["@/assets/variables.scss", "@/assets/main.scss"],
+  css: ['@/assets/variables.scss', '@/assets/main.scss'],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: [{ path: "~/components/core", pathPrefix: false }],
+  components: [{ path: '~/components/core', pathPrefix: false }],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
     // https://go.nuxtjs.dev/typescript
-    "@nuxt/typescript-build",
+    '@nuxt/typescript-build',
     // https://go.nuxtjs.dev/tailwindcss
-    "@nuxtjs/tailwindcss",
+    '@nuxtjs/tailwindcss'
   ],
 
   // Modules: https://go.nuxtjs.dev/config-modules
   modules: [
     // https://go.nuxtjs.dev/axios
-    "@nuxtjs/axios",
+    '@nuxtjs/axios',
     // https://go.nuxtjs.dev/pwa
-    "@nuxtjs/pwa",
+    '@nuxtjs/pwa',
     // https://i18n.nuxtjs.org/
-    "@nuxtjs/i18n",
+    '@nuxtjs/i18n'
   ],
 
   // Axios module configuration: https://go.nuxtjs.dev/config-axios
   axios: {
     // Workaround to avoid enforcing hard-coded localhost:3000: https://github.com/nuxt-community/axios-module/issues/308
-    baseURL: "/",
+    baseURL: '/'
   },
 
   // PWA module configuration: https://go.nuxtjs.dev/pwa
   pwa: {
     manifest: {
-      lang: "en",
-    },
+      lang: 'en'
+    }
   },
 
   i18n: {
     locales: [
-      { code: "en", iso: "en_US", dir: "ltr" },
-      { code: "fa", iso: "fa_IR", dir: "rtl" },
+      { code: 'en', iso: 'en_US', dir: 'ltr' },
+      { code: 'fa', iso: 'fa_IR', dir: 'rtl' }
     ],
-    defaultLocale: "en",
+    defaultLocale: 'en',
     vueI18nLoader: true,
-    strategy: "no_prefix",
-    seo: true,
+    strategy: 'no_prefix',
+    seo: true
   },
 
   render: {
     asyncScripts: true,
-    crossorigin: "anonymous",
+    crossorigin: 'anonymous',
     http2: {
-      push: true,
-    },
+      push: true
+    }
   },
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
@@ -101,21 +101,21 @@ export default {
     optimizeCSS: true,
     parallel: true,
     splitChunks: {
-      chunks: "all",
-      automaticNameDelimiter: ".",
+      chunks: 'all',
+      automaticNameDelimiter: '.',
       name: undefined,
-      cacheGroups: {},
+      cacheGroups: {}
     },
     html: {
       minifyCSS: true,
-      minifyJS: false,
+      minifyJS: false
     },
     terser: {
       parallel: true,
       cache: false,
       sourceMap: true,
       extractComments: {
-        filename: "LICENSES",
+        filename: 'LICENSES'
       },
       terserOptions: {
         ecma: undefined,
@@ -130,15 +130,15 @@ export default {
         ie8: false,
         keep_classnames: undefined,
         keep_fnames: false,
-        safari10: false,
-      },
-    },
+        safari10: false
+      }
+    }
   },
 
   vue: {
     config: {
       productionTip: false,
-      devtools: false,
-    },
-  },
-};
+      devtools: false
+    }
+  }
+}

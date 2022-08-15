@@ -12,28 +12,26 @@
       4
     </div>
     <div class="mt-4">
-      {{ error.statusCode === 404 ? $t("pageNotFound") : $t("otherError") }}
+      {{ error.statusCode === 404 ? $t('pageNotFound') : $t('otherError') }}
     </div>
   </div>
 </template>
 
 <script lang="ts">
 export default {
+  name: 'ErrorPage',
   props: {
     error: {
       type: Object,
-      default: null,
-    },
+      default: null
+    }
   },
   head() {
     return {
-      title:
-        this.error.statusCode === 404
-          ? (this.$t("pageNotFound") as string)
-          : (this.$t("otherError") as string),
-    };
-  },
-};
+      title: '404 - Not found'
+    }
+  }
+}
 </script>
 
 <style lang="scss">

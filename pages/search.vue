@@ -1,18 +1,23 @@
 <template>
-  <div></div>
+  <div>
+    Lorem ipsum dolor sit amet consectetur adipisicing elit. Expedita commodi
+    tenetur officiis ducimus eligendi voluptatem numquam accusantium cupiditate,
+    earum dolorum assumenda sunt. Ab doloribus eligendi, recusandae numquam
+    distinctio quidem quo!
+  </div>
 </template>
 
 <script lang="ts">
-import Vue from "vue";
+import Vue from 'vue'
 
 export default Vue.extend({
-  name: "SearchPage",
+  name: 'SearchPage',
   head() {
     return {
-      title: this.$t("page_title") as string,
-    };
-  },
-});
+      title: this.$t('page_title') as string
+    }
+  }
+})
 </script>
 
 <i18n>
