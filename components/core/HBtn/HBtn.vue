@@ -158,6 +158,9 @@ export default defineComponent({
       text-decoration: none;
     }
   }
+  &--icon > &__content {
+    padding: 5px !important;
+  }
   &--outlined {
     border: thin solid;
   }
