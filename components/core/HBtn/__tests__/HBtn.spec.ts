@@ -58,6 +58,16 @@ describe('HBtn.vue', () => {
     expect(wrapper.html()).toMatchSnapshot()
   })
 
+  it('should render with the correct class when passed the icon prop', () => {
+    const wrapper = mountFunction({
+      propsData: {
+        icon: true
+      }
+    })
+
+    expect(wrapper.html()).toMatchSnapshot()
+  })
+
   it('should render specified tag when using tag prop', () => {
     const wrapper = mountFunction({
       propsData: {
