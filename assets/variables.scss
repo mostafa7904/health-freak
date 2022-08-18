@@ -1,32 +1,39 @@
-$h-primary: "#55bd6d";
-$h-accent: "#e6f6ee";
-$h-secondary: "#f2f3f5";
-$h-success: "#00e676";
-$h-warning: "#FFC107";
-$h-error: "#FF5252";
-$h-info: "#2196F3";
-$h-light: "#f3f3f3";
-$h-dark: "#272727";
+$h-primary: '#55bd6d';
+$h-accent: '#e6f6ee';
+$h-secondary: '#f2f3f5';
+$h-success: '#00e676';
+$h-warning: '#FFC107';
+$h-error: '#FF5252';
+$h-info: '#2196F3';
+$h-light: '#f3f3f3';
+$h-dark: '#272727';
 
 $h-colors: (
-  "primary": $h-primary,
-  "accent": $h-accent,
-  "secondary": $h-secondary,
-  "success": $h-success,
-  "warning": $h-warning,
-  "error": $h-error,
-  "info": $h-info,
-  "light": $h-light,
-  "dark": $h-dark,
+  'primary': $h-primary,
+  'accent': $h-accent,
+  'secondary': $h-secondary,
+  'success': $h-success,
+  'warning': $h-warning,
+  'error': $h-error,
+  'info': $h-info,
+  'light': $h-light,
+  'dark': $h-dark
 );
 
 $h-radius: (
   0: 0,
-  "sm": 2px,
-  "md": 4px,
-  "lg": 8px,
-  "xl": 24px,
-  circle: 50%,
+  'sm': 2px,
+  'md': 4px,
+  'lg': 8px,
+  'xl': 24px,
+  circle: 50%
 );
 
 $main-padding: 18px 12px 0 12px;
+
+$display-breakpoints: (
+  'sm': 640px,
+  'md': 768px,
+  'lg': 1024px,
+  'xl': 1280px
+);

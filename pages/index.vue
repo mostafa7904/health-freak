@@ -1,6 +1,6 @@
 <template>
   <div>
-    <!-- <a
+    <a
       v-for="locale in $i18n.locales"
       :key="locale.code"
       class="mx-6"
@@ -8,7 +8,7 @@
       @click.prevent.stop="changeLang(locale)"
     >
       {{ locale.code }}
-    </a> -->
+    </a>
   </div>
 </template>
 
