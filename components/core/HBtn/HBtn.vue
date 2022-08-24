@@ -119,6 +119,7 @@ export default defineComponent({
 
 .h-btn {
   position: relative;
+  width: fit-content;
   align-items: center;
   display: inline-flex;
   flex: 0 0 auto;
