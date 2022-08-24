@@ -1,0 +1,9 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`HNavigationDrawer.vue should change the state if the value is changed 1`] = `"<nav class=\\"h-navigation-drawer h-navigation-drawer--open\\"> </nav>"`;
+
+exports[`HNavigationDrawer.vue should change the state if the value is changed 2`] = `"<nav class=\\"h-navigation-drawer h-navigation-drawer--close\\"> </nav>"`;
+
+exports[`HNavigationDrawer.vue should render navigation drawer closed if no value is passed 1`] = `"<nav class=\\"h-navigation-drawer h-navigation-drawer--close\\"> </nav>"`;
+
+exports[`HNavigationDrawer.vue should render navigation drawer open if value passed is true 1`] = `"<nav class=\\"h-navigation-drawer h-navigation-drawer--open\\"> </nav>"`;
