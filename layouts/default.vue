@@ -49,7 +49,25 @@
           {{ $t('Donate') }}
         </h-btn>
       </nav>
+
+      <div class="w-full flex sm:hidden justify-between items-center">
+        <h-btn icon @click="toggleDrawer()">
+          <i class="ri-menu-5-line ri-2x"></i>
+        </h-btn>
+        <h-btn icon to="/">
+          <img width="50" src="/icon.png" alt="health freak icon" />
+        </h-btn>
+      </div>
+
+      <h-navigation-drawer v-model="drawer">
+        <template #prepend>
+          <h-btn class="mt-5 mr-2" icon @click="toggleDrawer()">
+            <i class="ri-close-line ri-2x"></i>
+          </h-btn>
+        </template>
+      </h-navigation-drawer>
     </header>
+
     <h-main>
       <nuxt />
     </h-main>
@@ -156,8 +174,14 @@ export default Vue.extend({
           href: '/help'
         }
       ]
+    },
+    drawer: false
+  }),
+  methods: {
+    toggleDrawer() {
+      this.drawer = !this.drawer
     }
-  })
+  }
 })
 </script>
 
@@ -197,6 +221,9 @@ export default Vue.extend({
   width: 100%;
   justify-content: space-between;
   align-items: center;
+  @media screen and (max-width: #{map-get($display-breakpoints, "sm")}) {
+    display: none;
+  }
 }
 
 .nav-list {
