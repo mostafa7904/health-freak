@@ -17,11 +17,15 @@
     "description": "A simple button."
   },
   "h-main": {
-    "attributes": [],
-    "description": "Wrap your main content and pages in this component."
+    "description": "Wrap your main content and pages in this component.",
+    "attributes": []
   },
   "h-highlight": {
+    "description": "A highlight mark element. put your text inside this component and see the highlight under it.",
+    "attributes": []
+  },
+  "h-navigation-drawer": {
     "attributes": [],
-    "description": "A highlight mark element. put your text inside this component and see the highlight under it."
+    "description": "A navigation drawer"
   }
 }
