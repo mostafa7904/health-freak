@@ -160,7 +160,7 @@ export default defineComponent({
     }
   }
   &--icon > &__content {
-    padding: 5px !important;
+    padding: 0;
   }
   &--outlined {
     border: thin solid;

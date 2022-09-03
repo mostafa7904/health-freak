@@ -90,6 +90,15 @@
               <i class="ri-twitter-line"></i>
             </h-btn>
           </div>
+          <a
+            v-for="locale in $i18n.locales"
+            :key="locale.code"
+            class="mx-1"
+            href="#"
+            @click.prevent.stop="changeLang(locale)"
+          >
+            {{ locale.code }}
+          </a>
         </div>
         <div
           v-for="(items, key) of footerItems"
@@ -124,6 +133,7 @@
 
 <script lang="ts">
 import Vue from 'vue'
+import { LocaleObject } from '@nuxtjs/i18n'
 
 export default Vue.extend({
   name: 'DefaultLayout',
@@ -180,6 +190,11 @@ export default Vue.extend({
   methods: {
     toggleDrawer() {
       this.drawer = !this.drawer
+    },
+    changeLang(locale: LocaleObject) {
+      this.$i18n.setLocale(locale.code)
+      document.documentElement.setAttribute('lang', locale.code)
+      document.location.reload()
     }
   }
 })
@@ -190,7 +205,6 @@ export default Vue.extend({
 
 #app {
   position: relative;
-  padding: 25px;
   flex: 1 1 auto;
   backface-visibility: hidden;
   display: flex;
@@ -198,22 +212,22 @@ export default Vue.extend({
   min-height: 100vh;
   max-width: 100%;
   color: black;
-
-  @media screen and (max-width: #{map-get($display-breakpoints, "md")}) {
-    padding: 10px;
-  }
+  overflow-x: hidden;
 }
 
 .h-header {
   position: relative;
-  top: 0;
-  left: 0px;
-  right: 0px;
+  display: flex;
+  padding: $main-padding;
+  top: $header-top;
+  left: 0;
+  right: 0;
   height: 68px;
   min-height: 68px;
   width: 100%;
-  margin-top: 0px;
-  display: flex;
+  @media screen and (max-width: #{map-get($display-breakpoints, "md")}) {
+    padding: $main-mobile-padding;
+  }
 }
 
 .h-navbar {

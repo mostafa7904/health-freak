@@ -29,7 +29,11 @@ $h-radius: (
   circle: 50%
 );
 
-$main-padding: 18px 12px 0 12px;
+$main-padding: 25px;
+$main-mobile-padding: 10px;
+$header-top: 25px;
+$header-padding: 0 #{$main-padding};
+$header-mobile-padding: 0 $main-mobile-padding;
 
 $display-breakpoints: (
   'sm': 640px,

@@ -36,7 +36,7 @@ export default defineComponent({
   background: white;
   width: 100%;
   height: 100vh;
-  overflow: hidden;
+  overflow: auto;
   z-index: 999;
   transition-duration: 0.2s;
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
@@ -48,9 +48,20 @@ export default defineComponent({
   }
   &--open {
     transform: translateX(0);
+    html,
+    body {
+      overflow-y: hidden;
+    }
   }
-  &--close {
+}
+html[lang='fa_IR'] {
+  .h-navigation-drawer--close {
     transform: translateX(100%);
+  }
+}
+html[lang='en_US'] {
+  .h-navigation-drawer--close {
+    transform: translateX(-100%);
   }
 }
 </style>

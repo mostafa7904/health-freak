@@ -33,6 +33,14 @@ export default {
         href: 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css',
         crossorigin: ''
       }
+    ],
+    script: [
+      {
+        src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js',
+        body: true,
+        defer: '',
+        async: ''
+      }
     ]
   },
 
@@ -46,7 +54,10 @@ export default {
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
-  components: [{ path: '~/components/core', pathPrefix: false }],
+  components: [
+    { path: '~/components/core', pathPrefix: false },
+    '~/components/app'
+  ],
 
   // Modules for dev and build (recommended): https://go.nuxtjs.dev/config-modules
   buildModules: [
