@@ -1,3 +1,15 @@
+@import 'variables';
+
+html {
+  font-size: 15px;
+  @media screen and (min-width: #{map-get($display-breakpoints, 'sm')}) {
+    font-size: 18px;
+  }
+  @media screen and (min-width: #{map-get($display-breakpoints, 'lg')}) {
+    font-size: 20px;
+  }
+}
+
 html[lang='en_US'] > * {
   font-family: 'Segoe UI', Roboto, system-ui, -apple-system, Helvetica, Arial,
     sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji';
@@ -13,4 +25,28 @@ a {
   &:hover {
     text-decoration: underline;
   }
+}
+
+h1 {
+  font-size: 3.75rem;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 3rem;
+}
+
+h2,
+h3 {
+  font-weight: 600;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: $heading-text-color;
+  line-height: 1.25;
 }

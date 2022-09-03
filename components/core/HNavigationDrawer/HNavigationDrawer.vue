@@ -12,8 +12,7 @@ import { PropType, defineComponent } from 'vue'
 export default defineComponent({
   name: 'HealthFreakNavigationDrawer',
   props: {
-    value: null as unknown as PropType<any>,
-    default: () => false
+    value: { type: null as unknown as PropType<any>, default: false }
   },
   computed: {
     computedClasses(): any {

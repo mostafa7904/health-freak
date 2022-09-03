@@ -29,15 +29,17 @@ $h-radius: (
   circle: 50%
 );
 
-$main-padding: 25px;
-$main-mobile-padding: 10px;
-$header-top: 25px;
-$header-padding: 0 #{$main-padding};
-$header-mobile-padding: 0 $main-mobile-padding;
-
 $display-breakpoints: (
   'sm': 640px,
   'md': 768px,
   'lg': 1024px,
   'xl': 1280px
 );
+
+$main-padding: 25px;
+$main-mobile-padding: 10px;
+$header-top: 25px;
+$header-padding: 0 #{$main-padding};
+$header-mobile-padding: 0 $main-mobile-padding;
+
+$heading-text-color: #26282d;

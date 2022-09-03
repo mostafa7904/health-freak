@@ -19,7 +19,7 @@ export default {
       // VazirMatn
       {
         rel: 'stylesheet',
-        href: 'https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap&text=آابپتثجچحخدذرزژسشصضطظعغفقکگلمنوهی ّ/ء',
+        href: 'https://fonts.googleapis.com/css2?family=Vazirmatn:wght@100;200;300;400;500;600;700;800;900&display=swap',
         crossorigin: ''
       },
       {
@@ -36,7 +36,7 @@ export default {
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     // add custom directives
-    `~/directives/index.ts`
+    '~/directives/index.ts'
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
