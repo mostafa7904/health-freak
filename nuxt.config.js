@@ -33,14 +33,6 @@ export default {
         href: 'https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css',
         crossorigin: ''
       }
-    ],
-    script: [
-      {
-        src: 'https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.0/gsap.min.js',
-        body: true,
-        defer: '',
-        async: ''
-      }
     ]
   },
 
