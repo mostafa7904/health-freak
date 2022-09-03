@@ -1,51 +1,51 @@
-import Vue from 'vue'
-import { VNodeDirective, VNode } from 'vue/types/vnode'
+// import Vue from 'vue'
+// import { VNodeDirective, VNode } from 'vue/types/vnode'
 
-function inserted(el: HTMLElement, binding: VNodeDirective, vnode: VNode) {
-  // console.log(binding)
-  //   el.addEventListener(
-  //     'touchstart',
-  //     (event: TouchEvent) => {
-  //       const touch = event.changedTouches[0]
-  //     //    const { touchstartX, touchendX, touchstartY, touchendY } = touch
-  //       console.log(touch)
-  //     },
-  //     { passive: true }
-  //   )
-  //   const dirRatio = 0.5
-  //   const minDistance = 16
-  //   wrapper.offsetX = touchendX - touchstartX
-  //   wrapper.offsetY = touchendY - touchstartY
-  //   if (Math.abs(wrapper.offsetY) < dirRatio * Math.abs(wrapper.offsetX)) {
-  //     wrapper.left &&
-  //       touchendX < touchstartX - minDistance &&
-  //       wrapper.left(wrapper)
-  //     wrapper.right &&
-  //       touchendX > touchstartX + minDistance &&
-  //       wrapper.right(wrapper)
-  //   }
-  //   if (Math.abs(wrapper.offsetX) < dirRatio * Math.abs(wrapper.offsetY)) {
-  //     wrapper.up && touchendY < touchstartY - minDistance && wrapper.up(wrapper)
-  //     wrapper.down &&
-  //       touchendY > touchstartY + minDistance &&
-  //       wrapper.down(wrapper)
-  //   }
-  //   const value = binding.value!
-  //   const target: any = value.parent ? el.parentElement : el
-  //   const options = value.options || { passive: true }
-  //   // Needed to pass unit tests
-  //   if (!target) return
-  //   const handlers = createHandlers(binding.value!)
-  //   target._touchHandlers = Object(target._touchHandlers)
-  //   target._touchHandlers![vnode.context!._uid] = handlers
-  //   Object.keys(handlers).forEach(eventName => {
-  //     target.addEventListener(
-  //       eventName,
-  //       handlers[eventName] as EventListener,
-  //       options
-  //     )
-  //   })
-}
+// function inserted(el: HTMLElement, binding: VNodeDirective, vnode: VNode) {
+// console.log(binding)
+//   el.addEventListener(
+//     'touchstart',
+//     (event: TouchEvent) => {
+//       const touch = event.changedTouches[0]
+//     //    const { touchstartX, touchendX, touchstartY, touchendY } = touch
+//       console.log(touch)
+//     },
+//     { passive: true }
+//   )
+//   const dirRatio = 0.5
+//   const minDistance = 16
+//   wrapper.offsetX = touchendX - touchstartX
+//   wrapper.offsetY = touchendY - touchstartY
+//   if (Math.abs(wrapper.offsetY) < dirRatio * Math.abs(wrapper.offsetX)) {
+//     wrapper.left &&
+//       touchendX < touchstartX - minDistance &&
+//       wrapper.left(wrapper)
+//     wrapper.right &&
+//       touchendX > touchstartX + minDistance &&
+//       wrapper.right(wrapper)
+//   }
+//   if (Math.abs(wrapper.offsetX) < dirRatio * Math.abs(wrapper.offsetY)) {
+//     wrapper.up && touchendY < touchstartY - minDistance && wrapper.up(wrapper)
+//     wrapper.down &&
+//       touchendY > touchstartY + minDistance &&
+//       wrapper.down(wrapper)
+//   }
+//   const value = binding.value!
+//   const target: any = value.parent ? el.parentElement : el
+//   const options = value.options || { passive: true }
+//   // Needed to pass unit tests
+//   if (!target) return
+//   const handlers = createHandlers(binding.value!)
+//   target._touchHandlers = Object(target._touchHandlers)
+//   target._touchHandlers![vnode.context!._uid] = handlers
+//   Object.keys(handlers).forEach(eventName => {
+//     target.addEventListener(
+//       eventName,
+//       handlers[eventName] as EventListener,
+//       options
+//     )
+//   })
+// }
 
 // function unbind(el: HTMLElement, binding: VNodeDirective, vnode: VNode) {
 //   const target: any = binding.value!.parent ? el.parentElement : el
@@ -145,11 +145,11 @@ function inserted(el: HTMLElement, binding: VNodeDirective, vnode: VNode) {
 //   }
 // }
 
-const Swipe = {
-  inserted
-  //   unbind,
-}
+// const Swipe = {
+// inserted
+//   unbind,
+// }
 
 // export default Swipe
 
-Vue.directive('swipe', Swipe)
+// Vue.directive('swipe', Swipe)

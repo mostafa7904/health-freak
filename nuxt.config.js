@@ -16,12 +16,6 @@ export default {
         href: 'https://fonts.gstatic.com',
         crossorigin: ''
       },
-      // // Open sans
-      // {
-      //   rel: "stylesheet",
-      //   href: "https://fonts.googleapis.com/css2?family=Open+Sans:wght@300&display=swap&text=ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789.-",
-      //   crossorigin: "",
-      // },
       // VazirMatn
       {
         rel: 'stylesheet',

@@ -75,7 +75,9 @@
     <footer class="h-footer">
       <div class="grid md:grid-cols-4 sm:grid-cols-2 grid-cols-1">
         <div>
-          <div class="h-footer__title">{{ $t('Health Freak') }}</div>
+          <div class="h-footer__title">
+            {{ $t('Health Freak') }}
+          </div>
           <div style="max-width: 34ch" class="text-sm opacity-75">
             {{ $t('health freak description') }}
           </div>
@@ -137,9 +139,6 @@ import { LocaleObject } from '@nuxtjs/i18n'
 
 export default Vue.extend({
   name: 'DefaultLayout',
-  head() {
-    return this.$nuxtI18nHead({ addSeoAttributes: true })
-  },
   data: () => ({
     footerItems: {
       About: [
@@ -187,6 +186,9 @@ export default Vue.extend({
     },
     drawer: false
   }),
+  head() {
+    return this.$nuxtI18nHead({ addSeoAttributes: true })
+  },
   methods: {
     toggleDrawer() {
       this.drawer = !this.drawer

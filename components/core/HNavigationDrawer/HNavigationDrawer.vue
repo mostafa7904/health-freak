@@ -1,6 +1,6 @@
 <template>
   <nav :class="computedClasses">
-    <slot name="prepend" class="h-navigation-drawer__prepend"> </slot>
+    <slot name="prepend" class="h-navigation-drawer__prepend"></slot>
     <slot class="h-navigation-drawer__content"></slot>
     <slot name="append" class="h-navigation-drawer__append"></slot>
   </nav>
@@ -12,7 +12,8 @@ import { PropType, defineComponent } from 'vue'
 export default defineComponent({
   name: 'HealthFreakNavigationDrawer',
   props: {
-    value: null as unknown as PropType<any>
+    value: null as unknown as PropType<any>,
+    default: () => false
   },
   computed: {
     computedClasses(): any {
@@ -54,11 +55,13 @@ export default defineComponent({
     }
   }
 }
+
 html[lang='fa_IR'] {
   .h-navigation-drawer--close {
     transform: translateX(100%);
   }
 }
+
 html[lang='en_US'] {
   .h-navigation-drawer--close {
     transform: translateX(-100%);
