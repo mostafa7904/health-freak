@@ -1,12 +1,12 @@
 @import 'variables';
 
 html {
-  font-size: 15px;
+  font-size: map-get($app-base-font-size, 'xs');
   @media screen and (min-width: #{map-get($display-breakpoints, 'sm')}) {
-    font-size: 18px;
+    font-size: map-get($app-base-font-size, 'sm');
   }
   @media screen and (min-width: #{map-get($display-breakpoints, 'lg')}) {
-    font-size: 20px;
+    font-size: map-get($app-base-font-size, 'lg');
   }
 }
 

@@ -123,7 +123,6 @@ export default defineComponent({
   align-items: center;
   display: inline-flex;
   flex: 0 0 auto;
-  font-weight: 500;
   letter-spacing: -0.0027rem;
   justify-content: center;
   outline: 0;
@@ -142,6 +141,8 @@ export default defineComponent({
   transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
   user-select: none;
   &__content {
+    font-weight: $btn-default-font-weight;
+    font-size: $btn-default-font-size;
     padding: 10px 12px;
     width: 100%;
     align-items: center;

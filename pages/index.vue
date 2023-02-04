@@ -1,6 +1,7 @@
 <template>
   <div class="home-page">
     <home-page-intro />
+    <home-page-filter-recepies />
   </div>
 </template>
 

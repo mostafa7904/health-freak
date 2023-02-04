@@ -92,15 +92,6 @@
               <i class="ri-twitter-line"></i>
             </h-btn>
           </div>
-          <a
-            v-for="locale in $i18n.locales"
-            :key="locale.code"
-            class="mx-1"
-            href="#"
-            @click.prevent.stop="changeLang(locale)"
-          >
-            {{ locale.code }}
-          </a>
         </div>
         <div
           v-for="(items, key) of footerItems"
@@ -120,7 +111,21 @@
       </div>
 
       <div
-        class="flex sm:flex-row flex-col sm:justify-between justify-center items-center mt-6"
+        class="flex sm:justify-start justify-center items-center mt-6 text-xs"
+      >
+        <span> {{ $t('Language') }}: </span>
+        <a
+          v-for="locale in $i18n.locales"
+          :key="locale.code"
+          class="mx-1"
+          href="javascript:void(0)"
+          @click.prevent.stop="changeLang(locale)"
+        >
+          {{ locale.code }}
+        </a>
+      </div>
+      <div
+        class="flex sm:flex-row flex-col sm:justify-between justify-center items-center mt-1"
       >
         <span class="text-xs">
           &copy; {{ new Date().getFullYear() }} {{ $t('All rights reserved') }}
@@ -189,6 +194,9 @@ export default Vue.extend({
   head() {
     return this.$nuxtI18nHead({ addSeoAttributes: true })
   },
+  mounted() {
+    console.log(this.$i18n)
+  },
   methods: {
     toggleDrawer() {
       this.drawer = !this.drawer
@@ -220,15 +228,16 @@ export default Vue.extend({
 .h-header {
   position: relative;
   display: flex;
-  padding: $main-padding;
+  padding: $header-padding;
   top: $header-top;
   left: 0;
   right: 0;
   height: 68px;
   min-height: 68px;
   width: 100%;
+  z-index: 999;
   @media screen and (max-width: #{map-get($display-breakpoints, "md")}) {
-    padding: $main-mobile-padding;
+    padding: $header-mobile-padding;
   }
 }
 
@@ -256,8 +265,10 @@ export default Vue.extend({
 
 .nav-list-item {
   &__link {
-    padding: 8px 15px;
-    border-radius: 4px;
+    padding: 10px 15px;
+    border-radius: 5px;
+    font-size: 0.78rem;
+    font-weight: 500;
     &--active {
       background: #{$h-primary};
       color: white;
@@ -266,21 +277,17 @@ export default Vue.extend({
   }
 }
 
-.website-name {
-  font-weight: 600;
-  @media screen and (max-width: #{map-get($display-breakpoints, "md")}) {
-    display: none;
-  }
-}
-
 .h-footer {
   position: relative;
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
-  padding: 50px 50px 30px 50px;
+  padding: $footer-padding;
   background-color: #f8f9fa;
   border-radius: 4px;
+  @media screen and (max-width: #{map-get($display-breakpoints, "md")}) {
+    padding: $footer-mobile-padding;
+  }
   &__title {
     font-size: 1.2rem;
     font-weight: 700;
@@ -308,6 +315,7 @@ export default Vue.extend({
     "About": "About",
     "Donate": "Donate",
     "General" : "General",
+    "Language": "Language",
     "All rights reserved": "All rights reserved",
     "Made by Ideato team": "Made by Ideato team",
     "Contact": "Contact",
@@ -327,6 +335,7 @@ export default Vue.extend({
     "About": "درباره",
     "Donate": "دونیت",
     "General": "عمومی",
+    "Language": "زبان",
     "All rights reserved": "تمامی حقوق محفوظ است",
     "Made by Ideato team": "توسعه داده شده توسط تیم Ideato",
     "Contact": "تماس",

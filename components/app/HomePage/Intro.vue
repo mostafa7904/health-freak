@@ -1,59 +1,34 @@
 <template>
-  <div class="grid grid-cols-1 sm:grid-cols-2 mt-6">
-    <div>
-      <h1 class="text-3xl">
-        {{ $t('intro_title') }}
-      </h1>
-      <p>
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis dicta
-        dolore, molestiae recusandae, quam quia dolorem, animi accusantium
-        consequatur soluta earum sit. Suscipit soluta quasi error, sunt
-        perspiciatis maiores illo.
-      </p>
-    </div>
-    <div>
+  <section class="intro-section">
+    <div class="intro-section__container grid grid-cols-1 sm:grid-cols-2">
+      <div>
+        <h1 class="text-3xl">
+          {{ $t('intro_title') }}
+        </h1>
+        <p class="mt-2">
+          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Nobis dicta
+          dolore, molestiae recusandae, quam quia dolorem, animi accusantium
+          consequatur soluta earum sit. Suscipit soluta quasi error, sunt
+          perspiciatis maiores illo.
+        </p>
+      </div>
+      <!-- <div>
       <picture>
-        <!-- AVIF -->
         <source srcset="/avif/home/intro.avif" type="image/avif" />
-        <source
-          srcset="/avif/home/intro-450-260.avif"
-          media="(min-width: 780px)"
-          type="image/avif"
-        />
-        <source
-          srcset="/avif/home/intro-300-190.avif"
-          media="(min-width: 600px)"
-          type="image/avif"
-        />
 
-        <!-- WEBP -->
         <source srcset="/webp/home/intro.webp" type="image/webp" />
-        <source
-          srcset="/webp/home/intro-450-260.webp"
-          media="(min-width: 780px)"
-          type="image/webp"
-        />
-        <source
-          srcset="/webp/home/intro-300-190.webp"
-          media="(min-width: 600px)"
-          type="image/webp"
-        />
 
-        <!-- PNG -->
-        <source srcset="/png/home/intro.png" />
-        <source
-          srcset="/png/home/intro-450-260.png"
-          media="(min-width: 780px)"
+        <img
+          src="/png/home/intro.png"
+          decoding="async"
+          loading="lazy"
+          width="100%"
+          alt="healthy food"
         />
-        <source
-          srcset="/png/home/intro-300-190.png"
-          media="(min-width: 600px)"
-        />
-
-        <img width="100%" src="/png/home/intro.png" alt="healthy food" />
       </picture>
+    </div> -->
     </div>
-  </div>
+  </section>
 </template>
 
 <script lang="ts">
@@ -64,7 +39,21 @@ export default defineComponent({
 })
 </script>
 
-<style lang="scss"></style>
+<style lang="scss">
+@import '~/assets/variables.scss';
+.intro-section {
+  width: 100%;
+  height: 100%;
+  margin-top: $main-padding;
+
+  &__container {
+    padding: $main-padding;
+    @media screen and (max-width: #{map-get($display-breakpoints, "md")}) {
+      padding: $main-mobile-padding;
+    }
+  }
+}
+</style>
 
 <i18n>
 {

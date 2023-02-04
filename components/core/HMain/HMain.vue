@@ -21,8 +21,8 @@ export default defineComponent({
   display: flex;
   flex: 1 0 auto;
   max-width: 100%;
-  padding: $main-padding;
   transition: 0.2s cubic-bezier(0.4, 0, 0.2, 1);
+
   &__wrap {
     flex: 1 1 auto;
     max-width: 100%;

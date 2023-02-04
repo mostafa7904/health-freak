@@ -36,10 +36,21 @@ $display-breakpoints: (
   'xl': 1280px
 );
 
-$main-padding: 25px;
-$main-mobile-padding: 10px;
+$app-base-font-size: (
+  'xs': 15px,
+  'sm': 18px,
+  'lg': 20px
+);
+
+$main-padding: 60px;
+$main-mobile-padding: 25px;
 $header-top: 25px;
-$header-padding: 0 #{$main-padding};
+$header-padding: 0 $main-padding;
 $header-mobile-padding: 0 $main-mobile-padding;
+$footer-padding: 50px $main-padding 30px $main-padding;
+$footer-mobile-padding: 50px $main-mobile-padding 15px $main-mobile-padding;
 
 $heading-text-color: #26282d;
+
+$btn-default-font-weight: 400;
+$btn-default-font-size: 1rem;
