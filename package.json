@@ -50,5 +50,8 @@
   "vetur": {
     "tags": "./docs/tags.json",
     "attributes": "./docs/attributes.json"
+  },
+  "engines": {
+    "node": "16.x"
   }
 }
