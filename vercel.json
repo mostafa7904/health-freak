@@ -3,7 +3,11 @@
     {
       "src": "nuxt.config.js",
       "use": "@nuxtjs/vercel-builder",
-      "config": {}
+      "config": {
+        "engines": {
+          "node": "16.x"
+        }
+      }
     }
   ]
 }
